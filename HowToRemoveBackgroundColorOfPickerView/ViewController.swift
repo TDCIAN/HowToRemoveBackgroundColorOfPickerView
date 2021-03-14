@@ -27,6 +27,9 @@ extension ViewController: UIPickerViewAccessibilityDelegate, UIPickerViewDataSou
     }
 
     func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
+        pickerView.subviews.forEach {
+            $0.backgroundColor = .clear
+        }
         
         let numberLabel = UILabel()
         numberLabel.textAlignment = .center
